@@ -23,6 +23,14 @@
             <th>Description</th>
             <td>{{ product.description }}</td>
         </tr>
+        <tr>
+            <th>Usuario</th>
+            <td>
+                <a href="{{ path('usuario_show', {'id': product.id}) }}">
+                    {{ product.usuario }}
+                </a>
+            </td>
+        </tr>
         </tbody>
     </table>
 
