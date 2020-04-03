@@ -5,10 +5,9 @@ app_lucky_number:
   path: /lucky/number
   controller: App\Controller\LuckyController::number
 
-usuario_data:
-  path: /usuario/data
-  controller: App\Controller\UserController::getData
-
 test:
   path: /test
   controller: App\Controller\TestController::testMe
+#main:
+#  path: /
+#  controller: App\Controller\UsuarioController::index

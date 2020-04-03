@@ -12,6 +12,7 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Description</th>
+                <th>Usuario</th>
                 <th>Show</th>
                 <th>Edit</th>
             </tr>
@@ -23,6 +24,12 @@
                 <td>{{ product.name }}</td>
                 <td>{{ product.price }}</td>
                 <td>{{ product.description }}</td>
+                <td>
+                    <a href="{{ path('usuario_show', {'id': product.id}) }}">
+                        {{ product.usuario }}
+                    </a>
+
+                </td>
                 <td>
                     <a href="{{ path('product_show', {'id': product.id}) }}">show</a>
                 </td>
