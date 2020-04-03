@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Spock index{% endblock %}
+
+{% block body %}
+    <h1>Spock index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for spock in spocks %}
+            <tr>
+                <td>{{ spock.id }}</td>
+                <td>{{ spock.name }}</td>
+                <td>
+                    <a href="{{ path('spock_show', {'id': spock.id}) }}">show</a>
+                    <a href="{{ path('spock_edit', {'id': spock.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('spock_new') }}">Create new Spock</a>
+
+    <style>
+
+    </style>
+{% endblock %}
+
+
+

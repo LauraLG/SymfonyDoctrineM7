@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Spock{% endblock %}
+
+{% block body %}
+    <h1>Create new Spock</h1>
+
+    {{ include('spock/_form.html.twig') }}
+
+    <a href="{{ path('spock_index') }}">back to list</a>
+{% endblock %}

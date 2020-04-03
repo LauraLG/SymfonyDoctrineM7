@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Spock{% endblock %}
+
+{% block body %}
+    <h1>Edit Spock</h1>
+
+    {{ include('spock/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('spock_index') }}">Back to list</a>
+
+    {{ include('spock/_delete_form.html.twig') }}
+{% endblock %}
