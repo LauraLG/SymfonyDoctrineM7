@@ -3,7 +3,7 @@
 {% block title %}Product{% endblock %}
 
 {% block body %}
-    <h1>Product</h1>
+    <h1>Description about: {{ product.name }}</h1>
 
     <table class="table">
         <tbody>
@@ -34,7 +34,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('product_index') }}">back to list</a>
+    <a href="{{ path('product_index') }}">Show all products</a>
 
     <a href="{{ path('product_edit', {'id': product.id}) }}">edit</a>
 

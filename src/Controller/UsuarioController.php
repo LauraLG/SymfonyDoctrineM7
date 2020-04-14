@@ -103,7 +103,18 @@ class UsuarioController extends AbstractController
         return $this->redirectToRoute('usuario_index');
     }
 
+    /**
+     * @Route("/{id}/products", name="usuario_products", methods={"GET"})
+     * @param Usuario $usuario
+     * @return Response
+     */
+    public function showProducts(Usuario $usuario):Response
+    {
 
+        return $this->render('usuario/products.html.twig',[
+            'usuario' => $usuario,
+        ]);
+    }
 
 
 }

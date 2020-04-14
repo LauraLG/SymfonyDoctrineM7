@@ -3,7 +3,7 @@
 {% block title %}Usuario{% endblock %}
 
 {% block body %}
-    <h1>Usuario</h1>
+    <h1>Details about: {{ usuario.username }}</h1>
 
     <table class="table">
         <tbody>
@@ -23,10 +23,15 @@
                 <th>Password</th>
                 <td>{{ usuario.password }}</td>
             </tr>
+            <tr>
+                <th>Associated products</th>
+                <td> </td>
+            </tr>
+
         </tbody>
     </table>
 
-    <a href="{{ path('usuario_index') }}">back to list</a>
+    <a href="{{ path('usuario_index') }}">Show all users</a><br>
 
     <a href="{{ path('usuario_edit', {'id': usuario.id}) }}">edit</a>
 

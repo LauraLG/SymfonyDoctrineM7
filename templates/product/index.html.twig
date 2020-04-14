@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Product index{% endblock %}
+{% block title %}Products{% endblock %}
 
 {% block body %}
-    <h1>Product index</h1>
+    <h1>Products</h1>
 
     <table class="table">
         <thead>
@@ -12,9 +12,9 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Description</th>
-                <th>Usuario</th>
                 <th>Show</th>
                 <th>Edit</th>
+                <th>Owner</th>
             </tr>
         </thead>
         <tbody>
@@ -25,16 +25,16 @@
                 <td>{{ product.price }}</td>
                 <td>{{ product.description }}</td>
                 <td>
-                    <a href="{{ path('usuario_show', {'id': product.id}) }}">
-                        {{ product.usuario }}
-                    </a>
-
-                </td>
-                <td>
                     <a href="{{ path('product_show', {'id': product.id}) }}">show</a>
                 </td>
                 <td>
                     <a href="{{ path('product_edit', {'id': product.id}) }}">edit</a>
+                </td>
+                <td>
+                    <a href="{{ path('usuario_show', {'id': product.id}) }}">
+                        {{ product.usuario }}
+                    </a>
+
                 </td>
             </tr>
         {% else %}

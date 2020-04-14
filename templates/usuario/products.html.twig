@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product list {% endblock %}
+
+{% block body %}
+    <h1>Owned products by {{ usuario.username }}</h1>
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <th>Username</th>
+            <td>{{ usuario.username }}</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td> {{ product. usuario_id }}</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <a href="{{ path('usuario_show', {'id': usuario.id}) }}">Back to {{ usuario.username }} </a><br>
+
+{% endblock %}
